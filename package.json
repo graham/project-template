@@ -6,7 +6,7 @@
         "letsgo": "npm install ; typings install; npm run build",
 
         "build": "npm run clean; webpack -p --config production.webpack.js",
-        "dev": "webpack --devtool sourcemap --progress --profile -w -d",
+        "dev": "webpack --devtool sourcemap --progress --profile -w -d --display-modules",
 
         "clean": "rm -f app/static/compiled/*",
         "fclean": "npm run clean ; rm -rf node_modules/ ; rm -rf typings",
