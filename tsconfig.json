@@ -10,7 +10,7 @@
         ],
         "baseUrl": ".",
         "paths": {
-            "nfs-common": ["./src/lib"]
+            "myproj-lib": ["./src/lib"]
         }            
     },
 

@@ -17,7 +17,7 @@ module.exports = {
     },
 
     output: {
-        path: "compiled",
+        path: "app/static/compiled",
         filename: '[name].bundle.js'
     },
 
@@ -51,11 +51,10 @@ module.exports = {
     ],
 
     resolve: {
-        // allow resolving of the common lib by the alias "nfs-common"
         // to avoid using deeply nested relative paths (eg: "../../../src/lib")
         extensions: ['', '.ts', '.tsx', '.js'],
         alias: {
-            'nfs-common': path.resolve(__dirname, 'src', 'lib'),
+            'myproj-lib': path.resolve(__dirname, 'src', 'lib'),
             'react': 'preact-compat',
             'react-dom': 'preact-compat'
         }

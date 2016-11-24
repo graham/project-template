@@ -3,12 +3,12 @@
     "version": "1.0.0",
     "description": "My Project",
     "scripts": {
-        "init": "npm install ; typings install",
+        "letsgo": "npm install ; typings install; npm run build",
 
         "build": "npm run clean; webpack -p --config production.webpack.js",
         "dev": "webpack --devtool sourcemap --progress --profile -w -d",
 
-        "clean": "rm -f compiled/*",
+        "clean": "rm -f app/static/compiled/*",
         "fclean": "npm run clean ; rm -rf node_modules/ ; rm -rf typings",
 
         "test": "echo \"Error: no test specified\" && exit 1"

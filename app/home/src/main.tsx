@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { test_lib_working } from "nfs-common";
+import { test_lib_working } from "myproj-lib";
 
 class HelloWorld extends React.Component<{}, {}> {
     render() {
