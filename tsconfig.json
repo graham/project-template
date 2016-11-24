@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target":    "es5",
+        "jsx":       "react",
+        "sourceMap": true,
+        "lib": [
+            "dom",
+            "es5",
+            "es2015"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "nfs-common": ["./src/lib"]
+        }            
+    },
+
+    "exclude": [
+        "node_modules"
+    ]
+}
+        
