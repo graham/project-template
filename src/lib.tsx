@@ -60,7 +60,7 @@ function mapMerge(left: any, right: any): any {
     var new_map = {};
 
     for (let source of [left, right]) {
-        for (let key of source) {
+        for (let key in source) {
             new_map[key] = source[key];
         }
     }
