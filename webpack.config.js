@@ -7,8 +7,8 @@ module.exports = {
         home: "./app/home/src/main",
 
         vendor: [
-            "preact",
-            "preact-compat"
+            "react",
+            "react-dom"
         ]
     },
 
@@ -55,8 +55,6 @@ module.exports = {
         extensions: ['', '.ts', '.tsx', '.js'],
         alias: {
             'myproj-lib': path.resolve(__dirname, 'src', 'lib'),
-            'react': 'preact-compat',
-            'react-dom': 'preact-compat'
         }
     }
 };
