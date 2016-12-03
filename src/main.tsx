@@ -9,6 +9,3 @@ class HelloWorld extends React.Component<{}, {}> {
 
 ReactDOM.render(<HelloWorld />,
     document.getElementById('content'));
-
-window['disp'] = disp;
-
