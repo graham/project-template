@@ -7,8 +7,9 @@ module.exports = {
         home: "./app/home/src/main",
 
         vendor: [
-            "react",
-            "react-dom"
+            "inferno",
+            "inferno-dom",
+            "inferno-component"
         ]
     },
 

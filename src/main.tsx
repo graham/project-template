@@ -1,11 +1,14 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import Inferno from 'inferno';
+import Component from 'inferno-component';
 
-class HelloWorld extends React.Component<{}, {}> {
+import { test_lib_working } from "myproj-lib";
+
+class HelloWorld extends Component<{}, {}> {
     render() {
-        return <div> Hello World </div>;
+        return <div> Hello World; from home! </div>;
     }
 }
 
-ReactDOM.render(<HelloWorld />,
-    document.getElementById('content'));
+Inferno.render(<HelloWorld />, document.getElementById('content'));
+
+test_lib_working();
