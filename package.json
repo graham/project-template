@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "My Project",
   "scripts": {
-    "letsgo": "npm install ; typings install; npm run build",
+    "letsgo": "npm install ; npm run build",
     "build": "npm run clean; webpack -p --config production.webpack.js",
     "dev": "webpack --devtool sourcemap --progress --profile -w -d --display-modules",
     "clean": "rm -f app/static/compiled/*",
-    "fclean": "npm run clean ; rm -rf node_modules/ ; rm -rf typings",
+    "fclean": "npm run clean ; rm -rf node_modules/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Graham Abbott <graham.abbott@gmail.com>",
