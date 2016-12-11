@@ -1,27 +1,26 @@
 {
-    "name": "myproject",
-    "version": "1.0.0",
-    "description": "My Project",
-    "scripts": {
-        "letsgo": "npm install ; typings install; npm run build",
-
-        "build": "npm run clean; webpack -p --config production.webpack.js",
-        "dev": "webpack --devtool sourcemap --progress --profile -w -d --display-modules",
-
-        "clean": "rm -f app/static/compiled/*",
-        "fclean": "npm run clean ; rm -rf node_modules/ ; rm -rf typings",
-
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Graham Abbott <graham.abbott@gmail.com>",
-    "dependencies": {
-        "react": "^15.4.1",
-        "react-dom": "^15.4.1"
-    },
-    "devDependencies": {
-        "webpack": "^1.13.3",
-        "@types/node": "^6.0.46",
-        "typescript":  "^2.0.6",
-        "ts-loader":   "^0.9.5"
-    }
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "My Project",
+  "scripts": {
+    "letsgo": "npm install ; npm run build",
+    "build": "npm run clean; webpack -p --config production.webpack.js",
+    "dev": "webpack --devtool sourcemap --progress --profile -w -d --display-modules",
+    "clean": "rm -f app/static/compiled/*",
+    "fclean": "npm run clean ; rm -rf node_modules/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Graham Abbott <graham.abbott@gmail.com>",
+  "dependencies": {
+    "@types/react": "^0.14.55",
+    "@types/react-dom": "^0.14.19",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.3",
+    "@types/node": "^6.0.46",
+    "typescript": "^2.0.6",
+    "ts-loader": "^0.9.5"
+  }
 }
