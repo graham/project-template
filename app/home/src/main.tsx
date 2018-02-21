@@ -5,7 +5,7 @@ import { test_lib_working } from "myproj-lib";
 
 class HelloWorld extends React.Component<{}, {}> {
     render() {
-        return <div> Hello World; from home! </div>;
+        return <div> Hello World; from home, but really this time! </div>;        
     }
 }
 

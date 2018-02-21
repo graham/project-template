@@ -12,14 +12,11 @@
   },
   "author": "Graham Abbott <graham.abbott@gmail.com>",
   "dependencies": {
-    "@types/react": "^0.14.55",
-    "@types/react-dom": "^0.14.19",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
   "devDependencies": {
     "webpack": "^1.13.3",
-    "@types/node": "^6.0.46",
     "typescript": "^2.0.6",
     "ts-loader": "^0.9.5"
   }
