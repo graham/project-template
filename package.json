@@ -11,13 +11,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Graham Abbott <graham.abbott@gmail.com>",
-  "dependencies": {
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "webpack": "^1.13.3",
-    "typescript": "^2.0.6",
-    "ts-loader": "^0.9.5"
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "ts-loader": "^0.9.5",
+    "typescript": "^2.7.2",
+    "webpack": "^1.13.3"
   }
 }
