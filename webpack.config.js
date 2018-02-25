@@ -5,10 +5,6 @@ module.exports = {
     entry: {
         main: __dirname + "/src/main",
         home: __dirname + "/app/home/src/main",
-        vendor: [
-            "react",
-            "react-dom"
-        ],
     },
 
     output: {
