@@ -3,58 +3,45 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        main: "./src/main",
-        home: "./app/home/src/main",
-
+        main: __dirname + "/src/main",
+        home: __dirname + "/app/home/src/main",
         vendor: [
             "react",
             "react-dom"
-        ]
-    },
-
-    scripts: {
-        build: "webpack"
+        ],
     },
 
     output: {
-        path: "app/static/compiled",
+        path: __dirname + "/app/static/compiled",
         filename: '[name].bundle.js'
     },
 
     resolve: {
-        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
-    },
-
-    module: {
-        loaders: [
-            { test: /\.tsx?$/, loader: "ts-loader" }
-        ]
-    },
-
-    plugins: [
-        new webpack.DefinePlugin({
-            '__DEVTOOLS__': true, //set it to true in dev mode
-            'process.env': {
-                'NODE_ENV': JSON.stringify('development')
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "vendor",
-            filename: "vendor.bundle.js",
-            minChunks: Infinity
-        })
-    ],
-
-    resolve: {
-        // to avoid using deeply nested relative paths (eg: "../../../src/lib")
-        extensions: ['', '.ts', '.tsx', '.js'],
+        extensions: [".tsx", ".js", ".ts", ".json"],
         alias: {
             'myproj-lib': path.resolve(__dirname, 'src', 'lib'),
         }
-    }
+    },
+
+    module: {
+        rules: [
+          {
+            test: /\.tsx?$/,
+            use: 'awesome-typescript-loader',
+            exclude: /node_modules/
+          }
+       ]
+    },
+
+     optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "vendor",
+                    chunks: "all"
+                }
+            }
+        }
+    },
 };

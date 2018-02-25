@@ -1,11 +1,12 @@
-import * as React from 'react';
+import * as React from "react";
+
+interface HelloProps { name: string; }
+
+const Hello = (props: HelloProps) => (
+  <div>Hello {props.name}!</div>
+)
+
 import * as ReactDOM from 'react-dom';
 
-class HelloWorld extends React.Component<{}, {}> {
-    render() {
-        return <div> Hello World </div>;
-    }
-}
-
-ReactDOM.render(<HelloWorld />,
+ReactDOM.render(<Hello name='React'/>,
     document.getElementById('content'));
