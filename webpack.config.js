@@ -2,9 +2,17 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+    mode: "development",
+    devtool: "inline-source-map",
+
     entry: {
         main: __dirname + "/src/main",
         home: __dirname + "/app/home/src/main",
+
+        vendor: [
+            "react",
+            "react-dom",
+        ]
     },
 
     output: {
@@ -20,16 +28,19 @@ module.exports = {
     },
 
     module: {
-        rules: [
-          {
-            test: /\.tsx?$/,
-            use: 'awesome-typescript-loader',
-            exclude: /node_modules/
-          }
+        rules: [{
+            test: /\.ts(x?)$/,
+            exclude: /node_modules/,
+            use: [
+                {
+                    loader: 'ts-loader'
+                }
+            ]
+        }
        ]
     },
 
-     optimization: {
+    optimization: {
         splitChunks: {
             cacheGroups: {
                 commons: {
@@ -40,4 +51,12 @@ module.exports = {
             }
         }
     },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
+
+    devServer: {
+        publicPath: "http://localhost:8080/app/static/compiled/",
+        hot: true
+    }
 };

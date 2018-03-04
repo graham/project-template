@@ -3,9 +3,25 @@ import * as ReactDOM from "react-dom";
 
 import { test_lib_working } from "myproj-lib";
 
-class HelloWorld extends React.Component<{}, {}> {
+var value = 0;
+
+interface HelloState {
+    value: number;
+}
+
+class HelloWorld extends React.Component<{}, HelloState> {
+    state = { value: 1 };
+
+    click = (e) => {
+        this.setState({value: this.state.value + 1});
+
+    }
+
     render() {
-        return <div> Hello World; from home. </div>;
+        return (<div>
+                <div> Hello World; from home, with a count of { this.state.value } </div>
+                <div> <input type='button' value='Here' onClick={this.click}/> </div>
+                </div>);
     }
 }
 
