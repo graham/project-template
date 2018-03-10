@@ -15,7 +15,8 @@
   "dependencies": {
     "@types/react": "^16.0.40",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-virtualized": "^9.18.5"
   },
   "devDependencies": {
     "babel-loader": "^7.1.3",

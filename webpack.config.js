@@ -17,7 +17,8 @@ module.exports = {
 
     output: {
         path: __dirname + "/app/static/compiled",
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        chunkFilename: '[name].bundle.js',
     },
 
     resolve: {
@@ -31,11 +32,9 @@ module.exports = {
         rules: [{
             test: /\.ts(x?)$/,
             exclude: /node_modules/,
-            use: [
-                {
-                    loader: 'ts-loader'
-                }
-            ]
+            use: [{
+                loader: 'ts-loader'
+            }]
         }
        ]
     },
@@ -43,14 +42,16 @@ module.exports = {
     optimization: {
         splitChunks: {
             cacheGroups: {
-                commons: {
-                    test: /[\\/]node_modules[\\/]/,
+                vendor: {
+                    test: "vendor",
                     name: "vendor",
-                    chunks: "all"
+                    chunks: "initial",
+                    enforce: true
                 }
             }
         }
     },
+
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ],
