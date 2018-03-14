@@ -1,8 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { test_lib_working } from "myproj-lib";
-
 var value = 0;
 
 interface HelloState {
@@ -28,4 +26,3 @@ class HelloWorld extends React.Component<{}, HelloState> {
 ReactDOM.render(<HelloWorld />,
     document.getElementById('content'));
 
-test_lib_working();
